@@ -10,4 +10,4 @@ Ex02-2-comment.py
     작은따옴표(') 3개 - 여러줄 주석
     큰따옴표(") 3개 - Docstring
 '''
-print('Comment') # 한줄 주석입니다.
+print('Comment') # 한줄 주석입니다
