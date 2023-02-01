@@ -1,29 +1,26 @@
 '''
+파일명 : Ex13-4-readHello1.py
 
-파일 읽기모드
-
-r(read me) : 읽기 전용 모드 / 파일 없으면 에러
+r (read mode) : 읽기 전용 모드 / 파일 없으면 에러
 
 경로
-    절대경로 예) C:\pstudy\Day07\Section13\hello.txt
-               =  C://pstudy//Day07//Section13//hello.txt
-    상대경로
-        예) ./upload/hello2.txt
-            ../../resources/hello.txt
+    절대경로 예) C://pstudy//PythonProject//Day07//Section13//hello.txt
+    상대경로 예) /hello2.txt
+                ../../resources/hello.txt
         . -> 현재폴더
-        .. -> 상위 폴더
-
+        .. -> 상위폴더
+    최상위 경로(root) / 또는 C:/(윈도우OS)
 '''
-
-
-file = open('../hello3.txt', 'rt') # 읽기 모드로 열어서 파일을 읽어오라
-  # 여기서 hello.txt 대신에 절대경로를 써도 된다.
-
+file = open('/hello5.txt', 'rt')
 str = file.read()
 print(str, end='')
 file.close()
 
+print()
+# with open('hello.txt', 'rt') as file:
+#     str = file.read()
+#     print(str, end='')
 
-with open('hello.txt', 'rt') as file :  # with문으로 사용하기
-    str = file.read()
-    print(str, end='')
+
+
+

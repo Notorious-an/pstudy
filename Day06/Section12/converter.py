@@ -1,9 +1,11 @@
-
-mile = 0.621371
-pound = 0.00220462
+'''
+파일명 : converter.py
+'''
+MILES = 0.621371
+POUND = 0.00220462
 
 def kilometer_to_miles(kilometer):
-    return kilometer * mile
+    return kilometer * MILES
 
 def gram_to_pounds(gram):
-    return gram * pound
+    return gram * POUND
