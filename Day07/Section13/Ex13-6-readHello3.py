@@ -6,7 +6,7 @@ readline()
 '''
 with open('hello.txt', 'rt', encoding='UTF-8') as file:
     while True:
-        str = file.readline()
+        str = file.readline()  # 위에줄 부터 한줄씩 읽어오기
 
         if str == '':
             break
