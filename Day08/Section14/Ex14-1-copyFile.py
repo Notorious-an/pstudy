@@ -6,7 +6,7 @@
 
 buffer_size  = 1024 # 1024byte -> 1KB 의미
 with open('hello.txt', 'rb') as source:
-    with open('hello2.txt', 'wb') as copy: # open 함수는 파일 없으면 hello2 만든다.
+    with open('hello2.txt', 'wb') as copy: # open 함수, 쓰기모드에서는 파일 없으면 hello2 만든다.
         while True :
             buffer = source.read(buffer_size) #매개변수로 size를 넣어줌
             if not buffer:

@@ -25,7 +25,7 @@ ex) str.replace  str이라는 클래스 밑에 여러가지 메소드가 있다.
 
 class Computer : # 붕어빵 기계 만들기
     def set_spec(self, cpu, ram, vga, ssd):  # 메소드 1, 변수 4개
-        self.cpu = cpu  # 매개 변수라는 cpu를 나 자신에게 정의해줌
+        self.cpu = cpu  # 매개 변수 cpu를 나 자신에게 받아오도록 정의해줌
         self.ram = ram
         self.vga = vga
         self.ssd = ssd

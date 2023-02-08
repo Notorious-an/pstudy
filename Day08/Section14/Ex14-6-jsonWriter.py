@@ -1,13 +1,13 @@
 '''
 JSON(JavaScript Object Notation)
- - 딕셔너리 비슷하다
+ - 딕셔너리 비슷하다     딕셔너리(파이썬) <-> json 을 배워보자
  - 구조 {key : value}
+ - 파이썬 dictionary 자료 구조 -> json 파일 바꾸는 메소드 json.dumps(객체)
 '''
 
 import json
 
 # 첫번째 방법
-
 
 '''
 dict_list = [
@@ -30,6 +30,9 @@ dict_list = [
     }
 
 ]
+
+# (mothod 설명) json.dumps(dictionary) dictionary 자료구조를 json 파일로 바꿔주는 메소드
+# json type 파일을 open(만들어서) 후 json 파일을 쓴다.
 
 json_string = json.dumps(dict_list)
 

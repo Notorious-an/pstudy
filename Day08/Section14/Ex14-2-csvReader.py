@@ -8,7 +8,7 @@ CSV(comma-separated values)
 
 student_list = []
 with open('학생명단.csv', 'rt', encoding = 'UTF-8') as file :
-    file.readline()
+    file.readline() # 첫 문장 읽기, readline 하고나면 포인터는 다음문장으로 넘어감
     while True :
         line = file.readline() # readline()은 str으로 인식함
         if not line :

@@ -11,7 +11,9 @@ with open('차량관리1.csv', 'r', newline='', encoding='UTF-8') as file:
     # csv 모듈은 자체 (유니버설) 줄 넘김 처리를 하므로,
     # newline=''을 지정하는 것은 항상 안전합니다.
 
-    car_reader = csv.reader(file, delimiter =',', quotechar = '"') # csv 파일 한줄씩 읽기
-    # text 파일이 아니기 떄문에 readline()이 아니라 csv.reader 쓴다.
+    car_reader = csv.reader(file, delimiter =',', quotechar = '"')
+    # (중요) csv.read() 함수는 반복가능한 iterator 객체를 반환하므로,
+    # 그 자체는 출력값이 없으며 for문을 통해 한 라인씩 가져 올 수 있다.
+
     for line in car_reader :
         print(line)
