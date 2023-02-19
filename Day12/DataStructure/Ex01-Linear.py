@@ -33,17 +33,34 @@ class LinearList():
 
     def insert_data(self, position, data):
         linear = self.linear
-        # 포지션 삽입 구현하기!
 
-        # 힌트 for문
-        # for i in range(lLen - 1, position, -1):
+        if position < 0 or position > len(linear):
+            print('데이터 범위를 벗어났습니다.') # 유효성 검사
+
+        linear.append(None) # 마지막 빈칸 하나 추가하기
+
+        # position 뒷자리 부터 한칸씩 뒤로 밀기
+        lLen = len(linear)
+        for i in range(lLen - 1, position, -1):
+            linear[i] = linear[i-1]  # 하나씩 데이터 밀어주고
+            linear[i-1] = None # 그자리는 none 값이 들어간다
+        # 포지션 자리에 data 입력
+        linear[position] = data
 
 
-    def delete_date(self, position):
+    def delete_data(self, position):
         linear = self.linear
-        # 삭제 구현하기!
+        lLen = len(linear)
+
+        if position < 0 or position > len(linear):
+            print('데이터 범위를 벗어났습니다.') # 유효성 검사
 
 
+
+        for i in range(lLen - 1, position, -1):
+            linear[i-1] = linear[i]  # 하나씩 데이터 당겨준다
+            linear[i] = None
+        linear.pop()
 
 
 
@@ -59,6 +76,8 @@ linear.add_data(5)
 linear.add_data(4)
 linear.add_data(2)
 linear.add_data(6)
+
+linear.delete_data(3)
 
 linear.print_list()
 
